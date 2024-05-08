@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"> -->
+
+    <title>Image Caption Generator</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+<center>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Image Caption Generator</h1>
+    </header>
+
+  <form action="{{ url_for('after') }}" method='POST' enctype='multipart/form-data'>
+    <input type="file" name='file1'>
+    <input type="submit" name="btn" value='predict caption' class='btn btn-warning'>
+  </form>
+</center>
+  <!-- Main content -->
+  <main>
+    <!-- Image upload section -->
+    <section class="upload-section">
+      <label for="upload" class="upload-label">Choose File</label>
+      <input type="file" id="upload" accept="image/*" class="upload-input">
+      <button id="generateBtn">Generate Caption</button>
+    </section>
+
+    <!-- Caption display section -->
+    <section class="caption-display" id="captionDisplay">
+      <!-- Caption will be displayed here -->
+    </section>
+  </main>
+</div>
+</html>
